@@ -8,37 +8,73 @@
 </head>
 <body>
     <header>
-        <h1>My Books</h1>
-        <p>A collection of my favorite books</p>
+        <h1>The Pelican and The Swan</h1>
     </header>
 
+    <section class="hero">
+        <img src="https://via.placeholder.com/1200x400?text=New+Author+-+Soon+to+be+published" alt="Hero Banner" class="hero-image">
+        <nav class="nav-tabs">
+            <ul>
+                <li><a href="#home" class="tab-link active" data-tab="home">Home</a></li>
+                <li><a href="#prologue" class="tab-link" data-tab="prologue">Prologue</a></li>
+                <li><a href="#about" class="tab-link" data-tab="about">About Me</a></li>
+                <li><a href="#contact" class="tab-link" data-tab="contact">Contact Us</a></li>
+                <li><a href="#more-books" class="tab-link" data-tab="more-books">More Books</a></li>
+            </ul>
+        </nav>
+    </section>
+
     <main>
-        <section class="books">
-            <div class="book">
-                <h2>Book Title 1</h2>
-                <p><strong>Author:</strong> Author Name</p>
-                <p><strong>Year:</strong> 2024</p>
-                <p>A brief description of the book goes here.</p>
-            </div>
+        <div id="home" class="tab-content active">
+            <section class="books">
+                <div class="book">
+                    <h2>Book Title 1</h2>
+                    <p><strong>Author:</strong> Author Name</p>
+                    <p><strong>Year:</strong> 2024</p>
+                    <p>A brief description of the book goes here.</p>
+                </div>
 
-            <div class="book">
-                <h2>Book Title 2</h2>
-                <p><strong>Author:</strong> Author Name</p>
-                <p><strong>Year:</strong> 2023</p>
-                <p>A brief description of the book goes here.</p>
-            </div>
+                <div class="book">
+                    <h2>Book Title 2</h2>
+                    <p><strong>Author:</strong> Author Name</p>
+                    <p><strong>Year:</strong> 2023</p>
+                    <p>A brief description of the book goes here.</p>
+                </div>
 
-            <div class="book">
-                <h2>Book Title 3</h2>
-                <p><strong>Author:</strong> Author Name</p>
-                <p><strong>Year:</strong> 2022</p>
-                <p>A brief description of the book goes here.</p>
-            </div>
-        </section>
+                <div class="book">
+                    <h2>Book Title 3</h2>
+                    <p><strong>Author:</strong> Author Name</p>
+                    <p><strong>Year:</strong> 2022</p>
+                    <p>A brief description of the book goes here.</p>
+                </div>
+            </section>
+        </div>
+
+        <div id="prologue" class="tab-content">
+            <h2>Prologue</h2>
+            <p>Welcome to the prologue section. Add your prologue content here.</p>
+        </div>
+
+        <div id="about" class="tab-content">
+            <h2>About Me</h2>
+            <p>Tell your story here. Share your background, inspirations, and journey as an author.</p>
+        </div>
+
+        <div id="contact" class="tab-content">
+            <h2>Contact Us</h2>
+            <p>Get in touch. Add your contact information and social media links here.</p>
+        </div>
+
+        <div id="more-books" class="tab-content">
+            <h2>More Books</h2>
+            <p>Explore more books from the author. Add additional book listings here.</p>
+        </div>
     </main>
 
     <footer>
         <p>&copy; 2026 My Books Collection. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
