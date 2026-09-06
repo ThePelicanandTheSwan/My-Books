@@ -1,78 +1,94 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ---------------------------------------------------------
+   The Pelican and The Swan — site stylesheet
+   Palette:
+     --navy      #1B2A4A  primary ink / header
+     --parchment #F4EFE3  page background
+     --brass     #A9812F  accent (rules, links, buttons)
+     --marsh     #45645C  secondary accent (tags, hovers)
+     --charcoal  #2A2A28  body text
+     --paper     #FFFDF8  panel background
+   Type:
+     Fraunces  — display / headings
+     Lora      — long-form story text
+     Inter     — navigation, labels, UI, forms
+--------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&display=swap');
+
+:root{
+  --navy: #1B2A4A;
+  --navy-deep: #121F38;
+  --parchment: #F4EFE3;
+  --brass: #A9812F;
+  --brass-dark: #8A6A22;
+  --marsh: #45645C;
+  --charcoal: #2A2A28;
+  --paper: #FFFDF8;
+  --line: rgba(27,42,74,0.14);
+  --maxw: 1120px;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+*{ box-sizing: border-box; }
+
+html{ scroll-behavior: smooth; }
+
+body{
+  margin: 0;
+  background: var(--parchment);
+  color: var(--charcoal);
+  font-family: 'Lora', Georgia, serif;
+  font-size: 18px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
 }
 
-header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    text-align: center;
-    padding: 2rem 1rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+img{ max-width: 100%; display: block; }
+
+a{ color: var(--brass-dark); text-decoration: none; }
+
+h1, h2, h3, h4{
+  font-family: 'Fraunces', Georgia, serif;
+  color: var(--navy);
+  line-height: 1.15;
+  margin: 0 0 0.5em 0;
+  font-weight: 500;
 }
 
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+h1{ font-size: clamp(2.1rem, 4.5vw, 3.4rem); font-weight: 600; }
+h2{ font-size: clamp(1.5rem, 3vw, 2rem); }
+h3{ font-size: 1.25rem; }
+
+p{ margin: 0 0 1.2em 0; }
+
+.container{
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 32px;
 }
 
-header p {
-    font-size: 1.1rem;
-    opacity: 0.9;
+/* Skip link for accessibility */
+.skip-link{
+  position: absolute; left: -999px; top: 0;
+  background: var(--navy); color: #fff; padding: 10px 16px; z-index: 200;
 }
+.skip-link:focus{ left: 12px; top: 12px; }
 
-main {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+/* ---------- Header / Nav ---------- */
+header.site-header{
+  background: var(--navy);
+  color: #EFE9DA;
+  position: sticky; top: 0; z-index: 100;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
+.nav-wrap{
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 18px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.nav-wrap .brand{ font-family: 'Fraunces', Georgia, serif; }
 
-.books {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.book {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.book:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
-}
-
-.book h2 {
-    color: #667eea;
-    margin-bottom: 0.5rem;
-    font-size: 1.5rem;
-}
-
-.book p {
-    margin-bottom: 0.5rem;
-    color: #555;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1.5rem;
-    margin-top: 3rem;
-}
-
-footer p {
-    margin: 0;
-}
+/* truncated for brevity */

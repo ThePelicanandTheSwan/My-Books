@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | The Pelican and The Swan</title>
+<meta name="description" content="Get in touch with author K.A. Stevenz.">
+<meta name="theme-color" content="#1B2A4A">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="canonical" href="https://thepelicanandtheswan.com/contact.html">
+<meta property="og:title" content="Contact | The Pelican and The Swan">
+<meta property="og:description" content="Get in touch with author K.A. Stevenz.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://thepelicanandtheswan.com/contact.html">
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html">The Pelican <span>&amp;</span> The Swan</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li><li><a href="prologue.html">Prologue</a></li><li><a href="about.html">About Me</a></li><li><a href="contact.html" aria-current="page">Contact</a></l[...]
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<main id="main">
+
+  <div class="page-header">
+    <div class="container">
+      <h1>Contact Me</h1>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container form-grid">
+      <div>
+        <h2>Get in Touch</h2>
+        <!--
+          CONTACT FORM — powered by Formspree (free tier: 50 submissions/month).
+          1. Create an account at https://formspree.io
+          2. Create a new form, get its endpoint (looks like
+             https://formspree.io/f/abcdwxyz)
+          3. Replace YOUR_FORM_ID below with that ID.
+          See README.md > "Contact form" for full setup steps and alternatives.
+        -->
+        <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="field">
+            <label for="c-name">Name</label>
+            <input id="c-name" type="text" name="name" autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="c-email">Email*</label>
+            <input id="c-email" type="email" name="_replyto" required autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="c-message">Message</label>
+            <textarea id="c-message" name="message" required></textarea>
+          </div>
+          <div class="field checkbox-field">
+            <input id="c-optin" type="checkbox" name="optin" value="yes">
+            <label for="c-optin">Sign up for the email list for updates, promotions, and more.</label>
+          </div>
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+          <input type="hidden" name="_subject" value="New message from thepelicanandtheswan.com">
+          <button class="btn" type="submit">Send</button>
+          <p class="form-note">Messages are sent directly to K.A. Stevenz&rsquo;s inbox via Formspree. No spam, no third-party sharing.</p>
+        </form>
+      </div>
+      <div>
+        <h2>Questions or Comments?</h2>
+        <p>You can send me a message or ask a general question using this form.</p>
+        <p>I will do my best to get back to you soon.</p>
+        <h3>The Pelican and The Swan</h3>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 The Pelican and The Swan. All rights reserved.</p>
+      <p><a href="about.html">K.A. Stevenz</a> &middot; <a href="contact.html">Get in touch</a></p>
+    </div>
+  </footer>
+
+  <div class="cookie-banner" id="cookie-banner">
+    <p>This site uses cookies to understand how visitors use it and to improve your experience. Accepting aggregates your browsing data with other visitors&rsquo; data.</p>
+    <div class="cookie-actions">
+      <button type="button" id="cookie-decline">Decline</button>
+      <button type="button" class="accept" id="cookie-accept">Accept</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
