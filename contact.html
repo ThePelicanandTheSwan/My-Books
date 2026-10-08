@@ -24,7 +24,7 @@
       <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
       <nav class="primary-nav" id="primary-nav" aria-label="Primary">
         <ul>
-          <li><a href="index.html">Home</a></li><li><a href="prologue.html">Prologue</a></li><li><a href="about.html">About Me</a></li><li><a href="contact.html" aria-current="page">Contact</a></l[...]
+          <li><a href="index.html">Home</a></li><li><a href="prologue.html">Prologue</a></li><li><a href="about.html">About Me</a></li><li><a href="contact.html" aria-current="page">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -42,22 +42,15 @@
     <div class="container form-grid">
       <div>
         <h2>Get in Touch</h2>
-        <!--
-          CONTACT FORM — powered by Formspree (free tier: 50 submissions/month).
-          1. Create an account at https://formspree.io
-          2. Create a new form, get its endpoint (looks like
-             https://formspree.io/f/abcdwxyz)
-          3. Replace YOUR_FORM_ID below with that ID.
-          See README.md > "Contact form" for full setup steps and alternatives.
-        -->
-        <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="bddd5295-0017-483e-ba48-ddf2bce9f92c">
           <div class="field">
             <label for="c-name">Name</label>
             <input id="c-name" type="text" name="name" autocomplete="name">
           </div>
           <div class="field">
             <label for="c-email">Email*</label>
-            <input id="c-email" type="email" name="_replyto" required autocomplete="email">
+            <input id="c-email" type="email" name="email" required autocomplete="email">
           </div>
           <div class="field">
             <label for="c-message">Message</label>
@@ -67,10 +60,9 @@
             <input id="c-optin" type="checkbox" name="optin" value="yes">
             <label for="c-optin">Sign up for the email list for updates, promotions, and more.</label>
           </div>
-          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-          <input type="hidden" name="_subject" value="New message from thepelicanandtheswan.com">
+          <input type="hidden" name="redirect" value="https://thepelicanandtheswan.com/contact.html">
           <button class="btn" type="submit">Send</button>
-          <p class="form-note">Messages are sent directly to K.A. Stevenz&rsquo;s inbox via Formspree. No spam, no third-party sharing.</p>
+          <p class="form-note">Messages are sent directly to K.A. Stevenz&rsquo;s inbox via Web3Forms. No spam, no third-party sharing.</p>
         </form>
       </div>
       <div>
