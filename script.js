@@ -9,6 +9,36 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // Dropdown toggle for Books menu
+  var dropdownToggle = document.querySelector('.dropdown-toggle');
+  var dropdownMenu = document.querySelector('.dropdown-menu');
+  var dropdown = document.querySelector('.dropdown');
+  
+  if (dropdownToggle && dropdownMenu && dropdown) {
+    dropdownToggle.addEventListener('click', function () {
+      var isOpen = dropdownToggle.getAttribute('aria-expanded') === 'true';
+      dropdownToggle.setAttribute('aria-expanded', String(!isOpen));
+      dropdown.classList.toggle('open', !isOpen);
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function (event) {
+      if (!dropdown.contains(event.target)) {
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+        dropdown.classList.remove('open');
+      }
+    });
+
+    // Close dropdown when a link is clicked
+    var links = dropdownMenu.querySelectorAll('a');
+    links.forEach(function (link) {
+      link.addEventListener('click', function () {
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+        dropdown.classList.remove('open');
+      });
+    });
+  }
+
   // Dropdown toggle on mobile (tap to open "More Books")
   var dropdownParent = document.querySelector('.has-dropdown');
   if (dropdownParent) {
