@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Book Three | The Pelican and The Swan</title>
-<meta name="description" content="Book Three from K.A. Stevenz.">
+<title>Book One | The Pelican and The Swan</title>
+<meta name="description" content="Book One from K.A. Stevenz &ndash; details coming soon.">
 <meta name="theme-color" content="#1B2A4A">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="canonical" href="https://thepelicanandtheswan.com/book3.html">
 <meta property="og:title" content="Book Three | The Pelican and The Swan">
-<meta property="og:description" content="Book Three from K.A. Stevenz.">
+<meta property="og:description" content="Book Three from K.A. Stevenz &ndash; details coming soon.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://thepelicanandtheswan.com/book3.html">
 <link rel="stylesheet" href="styles.css">
@@ -21,10 +21,20 @@
   <header class="site-header">
     <div class="nav-wrap">
       <a class="brand" href="index.html">The Pelican <span>&amp;</span> The Swan</a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
       <nav class="primary-nav" id="primary-nav" aria-label="Primary">
         <ul>
-          <li><a href="index.html">Home</a></li><li><a href="prologue.html">Prologue</a></li><li><a href="about.html">About Me</a></li><li><a href="contact.html">Contact</a></li><li class="has-dro[...]
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <div class="dropdown">
+              <button class="dropdown-toggle" aria-expanded="false" aria-controls="books-menu">Books</button>
+              <ul class="dropdown-menu" id="books-menu">
+                <li><a href="book1.html">Book 1</a></li>
+                <li><a href="book2.html">Book 2</a></li>
+                <li><a href="book3.html">Book 3</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="prologue.html">Prologue</a></li><li><a href="about.html">About Me</a></li><li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -34,14 +44,16 @@
 
   <div class="page-header">
     <div class="container">
-      <p style="font-family:'Inter',sans-serif;color:var(--brass);margin-bottom:6px;">Hello</p>
       <h1>Under Construction</h1>
     </div>
   </div>
   <section class="section">
     <div class="container section-narrow">
-      <h2>Book Three</h2>
-      <p><a class="btn" href="book3.html">Find out more</a></p>
+      <div class="book-card" style="border:none;padding:0;">
+        <h3>Book One</h3>
+        <p class="book-status">Details coming soon.</p>
+        <p>This page is under construction while the manuscript is being finished. Check back for updates.</p>
+      </div>
     </div>
   </section>
 
@@ -63,6 +75,9 @@
   </div>
 
   <script src="script.js"></script>
+
+</body>
+</html>
 
 </body>
 </html>
